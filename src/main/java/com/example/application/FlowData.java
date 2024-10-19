@@ -17,19 +17,18 @@ public class FlowData extends VerticalLayout {
     public FlowData(ContactService service) {
 
         var grid = new Grid<>(Contact.class, false);
-        grid.setItems(service.findAll());
 
-        grid.addComponentColumn(contact -> new Image(contact.getPictureUrl(), contact.getFirstName() + " " + contact.getLastName()));
-        grid.addColumn(Contact::getFirstName).setHeader("First Name");
-        grid.addColumn(Contact::getLastName).setHeader("Last Name");
-        grid.addColumn(Contact::getEmail).setHeader("Email");
-        grid.addComponentColumn(contact -> new DatePicker(contact.getLastContacted())).setHeader("Last Contacted");
+        grid.addComponentColumn(contact -> new Image(contact.getPictureUrl(), contact.getFirstName() + " " + contact.getLastName())).setAutoWidth(true);
+        grid.addColumn(Contact::getFirstName).setHeader("First Name").setAutoWidth(true);
+        grid.addColumn(Contact::getLastName).setHeader("Last Name").setAutoWidth(true);
+        grid.addColumn(Contact::getEmail).setHeader("Email").setAutoWidth(true);
+        grid.addComponentColumn(contact -> new DatePicker(contact.getLastContacted())).setHeader("Last Contacted").setAutoWidth(true);
 
-        grid.getColumns().forEach(c -> c.setAutoWidth(true));
+
 
         add(
             new H1("Contacts"),
             grid
-            );
+        );
     }
 }
