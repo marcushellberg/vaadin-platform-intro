@@ -35,6 +35,7 @@ export default function MainLayout() {
               </SideNavItem>
             ))}
           </SideNav>
+          <a href="/oauth2/authorization/control-center" router-ignore>Log in</a>
         </header>
       </div>
 
