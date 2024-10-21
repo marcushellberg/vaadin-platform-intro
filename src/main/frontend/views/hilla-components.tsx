@@ -1,6 +1,6 @@
 import {ViewConfig} from "@vaadin/hilla-file-router/types.js";
 import {TextField} from "@vaadin/react-components/TextField";
-import {Button} from "@vaadin/react-components";
+import {Button, DatePicker} from "@vaadin/react-components";
 import {Notification} from "@vaadin/react-components/Notification.js";
 import {useSignal} from "@vaadin/hilla-react-signals";
 

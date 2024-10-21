@@ -17,12 +17,12 @@ export default function HillaData() {
 
   const contacts = useSignal<Contact[]>([]);
 
-  async function getProducts() {
+  async function getContacts() {
 
   }
 
   useEffect(() => {
-    getProducts();
+    getContacts();
   }, []);
 
   return (
