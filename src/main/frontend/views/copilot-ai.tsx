@@ -17,12 +17,12 @@ export default function CopilotAi() {
 
   const contacts = useSignal<Contact[]>([]);
 
-  async function getProducts() {
+  async function getContacts() {
     contacts.value = await ContactService.findAll();
   }
 
   useEffect(() => {
-    getProducts();
+    getContacts();
   }, []);
 
   return (
