@@ -32,7 +32,5 @@ public class FlowComponents extends VerticalLayout {
             heading,
             form
         );
-
- }
-
+    }
 }
