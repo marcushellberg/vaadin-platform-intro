@@ -28,7 +28,7 @@ public class FlowComponents extends VerticalLayout {
 
         add(
             heading,
-            new HorizontalLayout(nameField, greetButton)
+            new HorizontalLayout(nameField, greetButton) {{ setDefaultVerticalComponentAlignment(Alignment.BASELINE);}}
         );
 
  }
