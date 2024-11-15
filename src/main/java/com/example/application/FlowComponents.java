@@ -21,14 +21,16 @@ public class FlowComponents extends VerticalLayout {
         var heading = new H1("Vaadin Components");
         var nameField = new TextField("Name");
         var greetButton = new Button("Greet");
+        var form = new HorizontalLayout(nameField, greetButton);
 
+        form.setDefaultVerticalComponentAlignment(Alignment.BASELINE);
         greetButton.addClickListener(e -> {
             Notification.show("Hello, " + nameField.getValue());
         });
 
         add(
             heading,
-            new HorizontalLayout(nameField, greetButton) {{ setDefaultVerticalComponentAlignment(Alignment.BASELINE);}}
+            form
         );
 
  }
